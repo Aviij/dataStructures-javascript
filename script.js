@@ -55,10 +55,7 @@ class Queue {
     enqueue(elements){
         this.items.push(elements);
     }
-    isEmpty(){
-        return this.items.length === 0;// check the length of the underlaying array
-        //return true; no need to do this getinto a single line 
-    }
+    
 
     dequeue(){
       if (this.isEmpty){
@@ -68,33 +65,51 @@ class Queue {
     print(){
         console.log(this.items);
     }
+
     front(){
-        if(this.isEmpty){
+        if(this.isEmpty()){
             return "Queue is Empty!";
         }
         return this.items[0];
 
     }
-    rear(){
+    rear(){ 
+        return this.items.length > 0 ? this.items[this.items.length-1]:"Queue is Empty";
+       }
+    size(){
         return this.items.length;
+    }
+
+    isEmpty(){
+        return this.items.length === 0;// check the length of the underlaying array
+        //return true; no need to do this getinto a single line 
     }
 }
 
 
 const firstQueue = new Queue();
 
-firstQueue.dequeue();
+
+
+firstQueue.enqueue(12);
+firstQueue.enqueue(132);
+firstQueue.enqueue(122);
+firstQueue.enqueue(121);
+firstQueue.enqueue(123);
+firstQueue.enqueue(12);
+firstQueue.enqueue(12);
 
 let firstElement = firstQueue.front();
-let lastElement  = firstQueue.rear();
+
+
 console.log( "the head is : ", firstElement);
-console.log( "the head is : ", lastElement);
+console.log(firstQueue.rear());
 
 
 
 
 
-firstQueue.print();
+
 
 
 
