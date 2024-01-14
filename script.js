@@ -1,6 +1,7 @@
 console.time("timer");
 
 
+//////////////////////////////implementation of stack class/////////////////////////
 
 class Stack{
     constructor(){
@@ -44,6 +45,83 @@ class Stack{
     }
 }
 
+//////////////////////////////implementation of quese class/////////////////////////
+
+class Queue { 
+    constructor(){
+        //initialized an empty array to store elements
+        this.items = [];     
+    }
+    enqueue(elements){
+        this.items.push(elements);
+    }
+    isEmpty(){
+        return this.items.length === 0;// check the length of the underlaying array
+        //return true; no need to do this getinto a single line 
+    }
+
+    dequeue(){
+      if (this.isEmpty){
+        console.log("Queue has front nor rear");
+      } return this.items.shift();
+    }
+    print(){
+        console.log(this.items);
+    }
+    front(){
+        if(this.isEmpty){
+            return "Queue is Empty!";
+        }
+        return this.items[0];
+
+    }
+    rear(){
+        return this.items.length;
+    }
+}
+
+
+const firstQueue = new Queue();
+
+firstQueue.dequeue();
+
+let firstElement = firstQueue.front();
+let lastElement  = firstQueue.rear();
+console.log( "the head is : ", firstElement);
+console.log( "the head is : ", lastElement);
+
+
+
+
+
+firstQueue.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+
+/////////////////////////// stack operations //////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////
+/*
 //instantiate a stack object and push 
 const stack = new Stack();
 
@@ -73,6 +151,7 @@ console.log(stack.isEmpty());
 //check size ()
 console.log("Stack is : ", stack.size());
 
+*/
 
 
 

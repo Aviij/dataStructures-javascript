@@ -1,2 +1,2 @@
 # dataStructures-javascript
-Implemented Data Structured in javascript.
+Implemented Data Structures in javascript.
